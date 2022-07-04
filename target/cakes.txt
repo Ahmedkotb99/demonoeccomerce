@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="4" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="17" time="170.947">
+    <testcase classname="user must register to have an account in the website" name="user register with valid data" time="23.805">
+        <failure message="Cannot locate option with value: 03&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.4', revision: '535d840ee2'&#10;System info: host: 'DESKTOP-AT94HTB', ip: '192.168.100.62', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException"><![CDATA[When user click the Register link...........................................passed
+When user enter gender......................................................passed
+And user enter firstname and lastname.......................................passed
+And user enter date of birth................................................failed
+And user enter email........................................................skipped
+And user enter company name.................................................skipped
+And user enter password and Reenter Password................................skipped
+Then user click register button.............................................skipped
+And user have a welcome message with color..................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: Cannot locate option with value: 03
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'DESKTOP-AT94HTB', ip: '192.168.100.62', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.findOptionsByValue(Select.java:287)
+	at org.openqa.selenium.support.ui.Select.selectByValue(Select.java:190)
+	at org.example.setpDefintions.D01_registerationStepsDef.date_ofBirth(D01_registerationStepsDef.java:36)
+	at ✽.user enter date of birth(file:///E:/Qutb/nopecommerceProject-master/src/main/resources/features/F01_registeration.feature:7)
+]]></failure>
+    </testcase>
+    <testcase classname="login user can switch between currencies" name="user switch between currencies" time="10.989">
+        <system-out><![CDATA[When user click on the currency dropdown-list...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user login could hover and choice multiple categories" name="user hover categories and choose one of them" time="8.521">
+        <system-out><![CDATA[When user hover category and select subcategory.............................passed
+Then user get subCategory"Desktops"displayed as a title.....................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user login search by name for to find a product" name="user using search input for find product" time="6.9">
+        <system-out><![CDATA[When user write product name 'Nikon D5500 DSLR' in search input.............passed
+And user click the search button............................................passed
+Then user find the product he looks for it 'Nikon D5500 DSLR'...............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user login search by SKU for to find a product" name="user using search input for find product by SKU" time="9.41">
+        <system-out><![CDATA[When user write product name ' M8_HTC_5L' in search input...................passed
+And user click the search button to find ele................................passed
+Then user find the product he looks for it 'M8_HTC_5L'......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user can opens any follow us links" name="user opens face book link" time="8.082">
+        <system-out><![CDATA[When user open facebook link................................................passed
+Then facebook page of nopCommerce is opened in new tab......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user can opens any follow us links" name="user opens twitter link" time="8.344">
+        <system-out><![CDATA[When user open twitter link.................................................passed
+Then twitter page of nopCommerce is opened in new tab.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user can opens any follow us links" name="user opens res  link" time="6.527">
+        <failure message="expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]" type="java.lang.AssertionError"><![CDATA[When user open res link.....................................................passed
+Then New Store News Page is opened..........................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/new-online-store-is-open] but found [https://demo.nopcommerce.com/news/rss/1]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.setpDefintions.D06_followUsSDef.rssAssert(D06_followUsSDef.java:53)
+	at ✽.New Store News Page is opened(file:///E:/Qutb/nopecommerceProject-master/src/main/resources/features/F06_followUs.feature:11)
+]]></failure>
+    </testcase>
+    <testcase classname="user can opens any follow us links" name="user opens YouTube link" time="9.578">
+        <system-out><![CDATA[When user open YouTube link.................................................passed
+Then youtube page of nopCommerce is opened in new tab.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user login can add product to shopping card" name="logged user  click on the wishList element &quot;Build your own computer&quot;" time="8.41">
+        <system-out><![CDATA[When user click add First product"HTC One M8 Android L 5.0 Lollipop"........passed
+Then user add item open page for the item and found details.................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user login can add product to shopping card" name="logged user  click on the wishList element &quot;Apple MacBook Pro 13-inch&quot;" time="7.827">
+        <system-out><![CDATA[When user click add second product "Apple MacBook Pro 13-inch"..............passed
+Then user add item open page for the item and found details"Apple MacBook Pro 13-inch"url page.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user can change the slider and open in home page" name="user click first slider" time="8.467">
+        <failure message="expected [https://demo.nopcommerce.com/Iphone_s6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user Click the first_slider............................................passed
+Then user open the product which it clickable...............................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/Iphone_s6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.setpDefintions.D08_homeSlidersDef.validateFirstSlider(D08_homeSlidersDef.java:26)
+	at ✽.user open the product which it clickable(file:///E:/Qutb/nopecommerceProject-master/src/main/resources/features/F08_homeSlider.feature:5)
+]]></failure>
+    </testcase>
+    <testcase classname="user can change the slider and open in home page" name="user click second slider" time="16.319">
+        <failure message="expected [https://demo.nopcommerce.com/Nokia_Lumia_1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user Click the second_slider...........................................passed
+Then user open the product 2 which it clickable.............................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/Nokia_Lumia_1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.setpDefintions.D08_homeSlidersDef.validateSecondSlider(D08_homeSlidersDef.java:39)
+	at ✽.user open the product 2 which it clickable(file:///E:/Qutb/nopecommerceProject-master/src/main/resources/features/F08_homeSlider.feature:9)
+]]></failure>
+    </testcase>
+    <testcase classname="guest user can add products to wishlist" name="success message is visible after add product to wishlist" time="8.717">
+        <system-out><![CDATA[When user add product to wishlist...........................................passed
+Then wishlist notification success is visible...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="guest user can add products to wishlist" name="number of wishlist items in home page is increased" time="9.013">
+        <system-out><![CDATA[When user add product to wishlist...........................................passed
+Then wishlist notification success is visible...............................passed
+And user get the  number of wishlist items after adding product.............passed
+Then number of wishlist items increased.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="guest user can add products to wishlist" name="added products are displayed on wishlist page" time="10.061">
+        <system-out><![CDATA[When user add product to wishlist...........................................passed
+Then wishlist notification success is visible...............................passed
+And user get the  number of wishlist items after adding product.............passed
+And user go to wishList page................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="user login in to the webSite" name="user login with valid Data" time="9.394">
+        <system-out><![CDATA[Given user go to login url..................................................passed
+When user login with valid email and password...............................passed
+Then user click on the login button.........................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
